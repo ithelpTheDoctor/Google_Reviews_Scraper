@@ -131,7 +131,7 @@ def google_reviews(url):
     opening_hours = rating_and_review_div.find('div',{'aria-label':re.compile("\w+day\, \d+[p|a]m to \d+[p|a]m")})
     if not opening_hours:
         opening_hours = rating_and_review_div.find('div',{'aria-label':re.compile("\w+day\, Open \d+ \w+")})
-    print(opening_hours)
+
     if opening_hours:
         opening_hours = opening_hours.get('aria-label','')   
     if not opening_hours:
